@@ -1,7 +1,11 @@
 ---
 ---
 
-@import "main";
+@import "main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+";
 
 #sidebar .sidebar-bottom {
   display: flex !important;
