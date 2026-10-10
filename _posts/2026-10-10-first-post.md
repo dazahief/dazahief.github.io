@@ -1,6 +1,6 @@
 ---
 title: "Hello World"
-date: today
+date: 2026-10-10 16:20:00 -0300
 categories: [Hello World]
 tags: [Hello World]
 ---
