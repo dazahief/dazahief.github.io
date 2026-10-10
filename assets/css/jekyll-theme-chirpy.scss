@@ -1,0 +1,77 @@
+---
+---
+
+@import "main";
+
+#sidebar .sidebar-bottom {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1.1rem;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  /* Quitar el punto original del tema */
+  .icon-border {
+    display: none !important;
+  }
+
+  /* El contenedor del botón de tema no debe aportar márgenes */
+  .btn-group {
+    margin: 0 !important;
+  }
+
+  /* Mismo tamaño y sin márgenes para la luna y los enlaces */
+  #mode-toggle,
+  > a {
+    box-sizing: border-box;
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  /* Punto antes de cada enlace (queda entre él y el ícono anterior) */
+  > a {
+    position: relative;
+  }
+
+  > a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -0.55rem;
+    width: 3px;
+    height: 3px;
+    margin-left: -1.5px;
+    margin-top: -1.5px;
+    border-radius: 50%;
+    background-color: var(--sidebar-muted-color);
+  }
+
+  /* Que el ícono de la luna también se vea centrado */
+  #mode-toggle > i {
+    line-height: 1;
+  }
+}
+
+#sidebar .sidebar-bottom i.liquipedia-icon {
+  display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+  background-color: currentColor;
+  -webkit-mask: url("/assets/img/liquipedia.svg") center / contain no-repeat;
+  mask: url("/assets/img/liquipedia.svg") center / contain no-repeat;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#sidebar .sidebar-bottom i.liquipedia-icon::before {
+  content: none;
+}
